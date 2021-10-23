@@ -2,13 +2,12 @@ class KlumpPopUp {
     amount = null;
     flag = false;
     key = '123';
-    constructor(public_key, amount) {
+    constructor(public_key) {
         this.flag = this.key === public_key ? true : false;
-        this.amount = amount;
     }
 
     payWithKlump() {
-        if (this.flag && this.amount) {
+        if (this.flag) {
             const body = document.getElementsByTagName('body')[0];
             const iFrame = document.createElement('iframe');
             iFrame.setAttribute(
