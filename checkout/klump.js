@@ -1,6 +1,4 @@
 class KlumpPopUp {
-    amount = null;
-    flag = false;
     key = '123';
     constructor(public_key, amount) {
         this.flag = this.key === public_key ? true : false;
