@@ -25,7 +25,10 @@ class KlumpPopUp {
 
     setTransaction() {
         window.addEventListener('message', function (event) {
-            console.log(this.iframe.contentDocument.getElementById('payment'));
+            console.log(
+                'button =' +
+                    this.iframe.contentDocument.getElementById('payment')
+            );
         });
     }
 }
