@@ -5,17 +5,23 @@ class KlumpPopUp {
         this.amount = amount;
     }
 
-    payWithKlump() {
+    setTransaction() {
         if (this.flag) {
-            const body = document.getElementsByTagName('body')[0];
-            const iFrame = document.createElement('iframe');
-            iFrame.setAttribute(
-                'src',
-                'https://elastic-kilby-0d4f88.netlify.app'
-            );
-            iFrame.style.cssText =
-                '\nbackground: transparent;\nbackground: rgba(0,0,0,0.005);\nborder: 0px none transparent;\noverflow-x: hidden;\noverflow-y: hidden;\nmargin: 0;\npadding: 0;\n-webkit-tap-highlight-color: transparent;\n-webkit-touch-callout: none; position: fixed;\nleft: 0;\ntop: 0;\nwidth: 100%;\nheight: 100%;)';
-            body.appendChild(iFrame);
+            console.log(document.getElementById('payment'));
         }
     }
+
+    // payWithKlump() {
+    //     if (this.flag) {
+    //         const body = document.getElementsByTagName('body')[0];
+    //         const iFrame = document.createElement('iframe');
+    //         iFrame.setAttribute(
+    //             'src',
+    //             'https://elastic-kilby-0d4f88.netlify.app'
+    //         );
+    //         iFrame.style.cssText =
+    //             '\nbackground: transparent;\nbackground: rgba(0,0,0,0.005);\nborder: 0px none transparent;\noverflow-x: hidden;\noverflow-y: hidden;\nmargin: 0;\npadding: 0;\n-webkit-tap-highlight-color: transparent;\n-webkit-touch-callout: none; position: fixed;\nleft: 0;\ntop: 0;\nwidth: 100%;\nheight: 100%;)';
+    //         body.appendChild(iFrame);
+    //     }
+    // }
 }
