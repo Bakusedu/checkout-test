@@ -19,12 +19,15 @@ class KlumpPopUp {
             body.appendChild(iFrame);
             console.log(this.amount);
             iFrame.onload = function () {
-                iFrame.contentWindow.postMessage('communication', '*');
+                iFrame.contentWindow.postMessage('1000', '*');
             };
         }
     }
 }
 
 window.addEventListener('message', function (event) {
-    console.log(event);
+    const iframe = document.getElementById('checkout')[3];
+    console.log(event.data);
+
+    iframe.button.innerHTML = 'Pay NGN ' + event.data;
 });
