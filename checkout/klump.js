@@ -28,7 +28,7 @@ class KlumpPopUp {
 window.addEventListener('message', function (event) {
     const button = document.getElementById('checkout')[3];
 
-    console.log(button.innerHTML);
+    console.log(KlumpPopUp.amount);
 
     // can message back using event.source.postMessage(...)
 });
