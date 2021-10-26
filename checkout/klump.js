@@ -19,14 +19,11 @@ class KlumpPopUp {
             body.appendChild(iFrame);
             iFrame.onload = function () {
                 iFrame.contentWindow.postMessage(this.amount, '*');
-                this.iframe = iFrame;
             };
         }
     }
 }
 
-const iframe = document.getElementById('checkout');
-
-iframe.addEventListener('message', function (event) {
+window.addEventListener('message', function (event) {
     console.log(event);
 });
