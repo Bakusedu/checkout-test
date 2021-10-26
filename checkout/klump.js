@@ -26,9 +26,7 @@ class KlumpPopUp {
 }
 
 window.addEventListener('message', function (event) {
-    const iframe = document.getElementById('checkout');
-
-    console.log(iframe.contentDocument);
+    console.log(document.getElementById('payment').value);
 
     // can message back using event.source.postMessage(...)
 });
