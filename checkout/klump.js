@@ -13,6 +13,7 @@ class KlumpPopUp {
                 'src',
                 'https://elastic-kilby-0d4f88.netlify.app'
             );
+            iFrame.setAttribute('id', 'checkout');
             iFrame.style.cssText =
                 '\nbackground: transparent;\nbackground: rgba(0,0,0,0.005);\nborder: 0px none transparent;\noverflow-x: hidden;\noverflow-y: hidden;\nmargin: 0;\npadding: 0;\n-webkit-tap-highlight-color: transparent;\n-webkit-touch-callout: none; position: fixed;\nleft: 0;\ntop: 0;\nwidth: 100%;\nheight: 100%;)';
             body.appendChild(iFrame);
@@ -25,8 +26,9 @@ class KlumpPopUp {
 }
 
 window.addEventListener('message', function (event) {
-    alert('received: ' + event.data);
-    console.log(this.iframe.contentDocument);
+    const iframe = document.getElementById('checkout');
+
+    console.log(iframe.contentDocument);
 
     // can message back using event.source.postMessage(...)
 });
