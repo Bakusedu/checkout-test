@@ -26,8 +26,8 @@ class KlumpPopUp {
 }
 
 window.addEventListener('message', function (event) {
-    const iframe = document.getElementById('checkout')[3];
+    const button = document.getElementById('checkout')[3];
     console.log(event.data);
 
-    iframe.button.innerHTML = 'Pay NGN ' + event.data;
+    button.innerHTML = 'Pay NGN ' + event.data;
 });
