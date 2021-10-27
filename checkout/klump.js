@@ -1,4 +1,4 @@
-const data = null;
+var data = null;
 window.addEventListener('message', function (event) {
     const button = document.getElementById('checkout')[3];
     data = event.data;
