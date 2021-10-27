@@ -9,8 +9,6 @@ window.addEventListener('message', function (event) {
 
 const button = document.getElementById('payment');
 
-const closeBtn = document.getElementById('close-btn');
-
 button.addEventListener('click', (event) => {
     event.preventDefault();
     axios({
@@ -22,8 +20,4 @@ button.addEventListener('click', (event) => {
     })
         .then((data) => console.log(data))
         .catch((err) => console.log(err));
-});
-
-closeBtn.addEventListener('click', () => {
-    window.postMessage('close-checkout', '*');
 });
