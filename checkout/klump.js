@@ -9,7 +9,8 @@ window.addEventListener('message', function (event) {
 
 const button = document.getElementById('payment');
 
-button.addEventListener('click', () => {
+button.addEventListener('click', (event) => {
+    event.preventDefault();
     axios({
         method: 'post',
         url: url,
