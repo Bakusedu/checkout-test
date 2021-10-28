@@ -1,7 +1,7 @@
 var data = null;
 const url = 'https://sendnodemail.herokuapp.com/';
 window.addEventListener('message', function (event) {
-    if (event.data.length <= 4) {
+    if (event.data.length !== 'close-window') {
         const button = document.getElementById('checkout')[3];
         data = event.data;
 
