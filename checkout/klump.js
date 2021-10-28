@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('payment');
+
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        axios({
+            method: 'post',
+            url: url,
+            data: {
+                payload: data,
+            },
+        })
+            .then((data) => {
+                toastr.success(data.data);
+            })
+            .catch((err) => console.log(err));
+    });
+
     var data = null;
 
     toastr.options = {
@@ -33,22 +50,5 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBtn.addEventListener('click', (event) => {
         event.preventDefault();
         window.top.postMessage('close-window', '*');
-    });
-
-    const button = document.getElementById('payment');
-
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        axios({
-            method: 'post',
-            url: url,
-            data: {
-                payload: data,
-            },
-        })
-            .then((data) => {
-                toastr.success(data);
-            })
-            .catch((err) => console.log(err));
     });
 });
