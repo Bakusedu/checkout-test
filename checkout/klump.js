@@ -1,32 +1,54 @@
-var data = null;
-const url = 'https://sendnodemail.herokuapp.com/';
-window.addEventListener('message', function (event) {
-    if (event.data.length !== 'close-window') {
-        const button = document.getElementById('checkout')[3];
-        data = event.data;
+document.addEventListener('DOMContentLoaded', function () {
+    var data = null;
 
-        button.innerHTML = 'Pay NGN ' + data;
-    }
-});
+    toastr.options = {
+        closeButton: true,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: 'toast-bottom-center',
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: '300',
+        hideDuration: '1000',
+        timeOut: '5000',
+        extendedTimeOut: '1000',
+        showEasing: 'swing',
+        hideEasing: 'linear',
+        showMethod: 'fadeIn',
+        hideMethod: 'fadeOut',
+    };
 
-const closeBtn = document.getElementById('close-btn');
+    const url = 'https://sendnodemail.herokuapp.com/';
+    window.addEventListener('message', function (event) {
+        if (event.data.length !== 'close-window') {
+            const button = document.getElementById('checkout')[3];
+            data = event.data;
 
-closeBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.top.postMessage('close-window', '*');
-});
+            button.innerHTML = 'Pay NGN ' + data;
+        }
+    });
 
-const button = document.getElementById('payment');
+    const closeBtn = document.getElementById('close-btn');
 
-button.addEventListener('click', (event) => {
-    event.preventDefault();
-    axios({
-        method: 'post',
-        url: url,
-        data: {
-            payload: data,
-        },
-    })
-        .then((data) => console.log(data))
-        .catch((err) => console.log(err));
+    closeBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.top.postMessage('close-window', '*');
+    });
+
+    const button = document.getElementById('payment');
+
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        axios({
+            method: 'post',
+            url: url,
+            data: {
+                payload: data,
+            },
+        })
+            .then((data) => {
+                toastr.success(data);
+            })
+            .catch((err) => console.log(err));
+    });
 });
