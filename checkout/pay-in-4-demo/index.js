@@ -13,5 +13,10 @@ verifyUser.addEventListener('click', (event) => {
 const closeBtn = document.getElementById('close-btn');
 
 closeBtn.addEventListener('click', () => {
-    window.top.postMessage('close-window', '*');
+    window.top.postMessage(
+        JSON.stringify({
+            closeCheckoutId: 'checkout',
+        }),
+        '*'
+    );
 });
