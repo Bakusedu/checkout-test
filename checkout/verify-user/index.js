@@ -1,6 +1,6 @@
 const enterTheCode = document.getElementById('enter-the-code');
 
-verifyUser.addEventListener('click', () => {
+enterTheCode.addEventListener('click', () => {
     window.top.postMessage(
         JSON.stringify({
             closeCheckoutId: 'verify-user',
