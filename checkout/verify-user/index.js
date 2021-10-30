@@ -1,4 +1,4 @@
-const verifyUser = document.getElementById('verify-user');
+const enterTheCode = document.getElementById('enter-the-code');
 
 verifyUser.addEventListener('click', () => {
     window.top.postMessage(
