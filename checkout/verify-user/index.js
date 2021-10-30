@@ -4,6 +4,7 @@ verifyUser.addEventListener('click', () => {
     window.top.postMessage(
         JSON.stringify({
             closeCheckoutId: 'verify-user',
+            openCheckoutId: 'enter-the-code',
         }),
         '*'
     );
