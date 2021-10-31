@@ -12,7 +12,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
         />
-        <title>Pay in 4 easy payments</title>
+        <title>Add your card</title>
     </head>
     <body>
         <div class="flex xl:justify-center xl:items-center h-screen">
@@ -47,15 +47,161 @@
                         </svg>
                     </div>
                 </div>
-                <p class="text-xl my-8 font-bold">Pay in 4 easy payments</p>
-                <ul class="font-bold ml-4 mb-8 space-y-4 list-disc">
-                    <li><span>Continue with Klump</span></li>
-                    <li><span>Review Order with Demo Store</span></li>
-                    <li><span>Confirm Purchase</span></li>
-                </ul>
+                <p class="text-xl my-8 font-bold">Add your card details</p>
+                <div class="space-y-4 mb-16">
+                    <div class="border border-gray-400 rounded-lg">
+                        <div class="flex items-center p-3">
+                            <div
+                                class="
+                                    w-8
+                                    h-8
+                                    mr-2
+                                    flex
+                                    bg-black
+                                    rounded-full
+                                    justify-center
+                                    items-center
+                                "
+                            >
+                                <span class="block text-white text-sm font-bold"
+                                    >E</span
+                                >
+                            </div>
+                            <div class="text-gray-600">
+                                <p class="font-bold text-sm">Edem Udo</p>
+                                <p class="text-sm">cyberormin@gmail.com</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="flex items-center justify-between p-2">
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="" />
+                                <span
+                                    class="
+                                        inline-block
+                                        ml-3
+                                        text-gray-600
+                                        font-semibold
+                                    "
+                                    >Remember me on this device</span
+                                >
+                            </div>
+                            <div>
+                                <svg
+                                    style="height: 20px; height: 20px"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M 12 2 C 6.477 2 2 6.477 2 12 C 2 17.523 6.477 22 12 22 C 17.523 22 22 17.523 22 12 C 22 6.477 17.523 2 12 2 z M 12 4 C 16.418 4 20 7.582 20 12 C 20 16.418 16.418 20 12 20 C 7.582 20 4 16.418 4 12 C 4 7.582 7.582 4 12 4 z M 11 7 L 11 13 L 13 13 L 13 7 L 11 7 z M 11 15 L 11 17 L 13 17 L 13 15 L 11 15 z"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div
+                            class="
+                                border border-gray-400
+                                rounded-t-lg
+                                p-3
+                                relative
+                                pl-10
+                            "
+                        >
+                            <svg
+                                class="absolute"
+                                style="
+                                    top: 16px;
+                                    left: 10px;
+                                    height: 20px;
+                                    width: 20px;
+                                "
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 50 50"
+                            >
+                                <path
+                                    d="M 7 9 C 4.25 9 2 11.25 2 14 L 2 36 C 2 38.75 4.25 41 7 41 L 43 41 C 45.75 41 48 38.75 48 36 L 48 14 C 48 11.25 45.75 9 43 9 Z M 7 11 L 43 11 C 44.667969 11 46 12.332031 46 14 L 46 16 L 4 16 L 4 14 C 4 12.332031 5.332031 11 7 11 Z M 4 21 L 46 21 L 46 36 C 46 37.667969 44.667969 39 43 39 L 7 39 C 5.332031 39 4 37.667969 4 36 Z M 9 24 L 9 26 L 25 26 L 25 24 Z"
+                                ></path>
+                            </svg>
+                            <input
+                                type="text"
+                                name=""
+                                placeholder="Card Number"
+                                id=""
+                                class="w-full outline-none text-sm"
+                            />
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="
+                                    border border-gray-400
+                                    rounded-bl-lg
+                                    p-3
+                                    pl-10
+                                    relative
+                                "
+                            >
+                                <svg
+                                    class="absolute"
+                                    style="
+                                        top: 16px;
+                                        left: 10px;
+                                        height: 20px;
+                                        height: 20px;
+                                    "
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M 6 1 L 6 3 L 5 3 C 3.9 3 3 3.9 3 5 L 3 19 C 3 20.1 3.9 21 5 21 L 19 21 C 20.1 21 21 20.1 21 19 L 21 5 C 21 3.9 20.1 3 19 3 L 18 3 L 18 1 L 16 1 L 16 3 L 8 3 L 8 1 L 6 1 z M 5 5 L 6 5 L 8 5 L 16 5 L 18 5 L 19 5 L 19 7 L 5 7 L 5 5 z M 5 9 L 19 9 L 19 19 L 5 19 L 5 9 z"
+                                    ></path>
+                                </svg>
+                                <input
+                                    type="tel"
+                                    placeholder="MM/YY"
+                                    name=""
+                                    id=""
+                                    class="w-full outline-none text-sm"
+                                />
+                            </div>
+                            <div
+                                class="
+                                    border border-gray-400
+                                    rounded-br-lg
+                                    p-3
+                                    pl-10
+                                    relative
+                                "
+                            >
+                                <svg
+                                    class="absolute"
+                                    style="
+                                        top: 16px;
+                                        left: 10px;
+                                        height: 20px;
+                                        height: 20px;
+                                    "
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M 252.5 28.332031 C 195.522 28.332031 149 74.688969 149 131.66797 L 149 191 L 145 191 A 49.773 49.773 0 0 0 95 240.66797 L 95 433.66797 C 95 461.23697 117.43 484 145 484 L 367 484 C 394.57 484 417 461.23697 417 433.66797 L 417 240.66797 A 49.773 49.773 0 0 0 367 191 L 356 191 L 356 131.66797 C 356 74.688969 309.478 28.332031 252.5 28.332031 z M 252.5 48.332031 C 298.451 48.332031 336 85.716969 336 131.66797 L 336 191 L 169 191 L 169 131.66797 C 169 85.716969 206.549 48.332031 252.5 48.332031 z M 145 211 L 367 211 A 30 30 0 0 1 397 241 L 397 434 A 30 30 0 0 1 367 464 L 145 464 A 30 30 0 0 1 115 434 L 115 241 A 30 30 0 0 1 145 211 z M 255.14453 306.00781 A 32.821 32.821 0 0 0 223.10156 339 A 32.186 32.186 0 0 0 234 363.49219 L 234 402 A 10 10 0 0 0 244 412 L 268 412 A 10 10 0 0 0 278 402 L 278 363.5 C 284.892 357.509 288.74219 348.862 288.74219 339 A 32.821 32.821 0 0 0 255.14453 306.00781 z M 255.92188 326.05273 A 12.905 12.905 0 0 1 268.74219 339.00977 C 268.74219 341.77477 267.99447 346.84977 262.98047 349.75977 A 10 10 0 0 0 258 358.4082 L 258 392 L 254 392 L 254 358.4082 A 10 10 0 0 0 249.01953 349.75977 A 11.88 11.88 0 0 1 243.10156 339.00977 A 12.9 12.9 0 0 1 255.92188 326.05273 z"
+                                    ></path>
+                                </svg>
+                                <input
+                                    type="tel"
+                                    placeholder="CVV"
+                                    name=""
+                                    id=""
+                                    class="w-full outline-none text-sm"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p class="text-gray-500 text-sm mb-4">
-                    By pressing Continue you consent to Klump sharing billing
-                    information with Demo Merchant Store
+                    We will store your card details for future purposes
                 </p>
                 <button
                     id="next-verify-user"
