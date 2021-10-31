@@ -1,3 +1,5 @@
+goBackToWhatsYourEmail = document.getElementById('whats-your-email');
+
 const terms = document.getElementById('terms');
 
 const closeBtn = document.getElementById('close-btn');
