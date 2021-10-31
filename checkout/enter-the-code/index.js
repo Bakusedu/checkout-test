@@ -42,7 +42,7 @@ changePhone.addEventListener('click', () => {
 });
 
 code.addEventListener('keyup', () => {
-    if (code.value.length > 6) {
+    if (code.value.length >= 6) {
         window.top.postMessage(
             JSON.stringify({
                 closeCheckoutId: 'enter-the-code',
