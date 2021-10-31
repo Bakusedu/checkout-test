@@ -4,6 +4,8 @@ const closeBtn = document.getElementById('close-btn');
 
 const email = document.getElementById('email');
 
+const goBackToEnterTheCode = document.getElementById('enter-the-code');
+
 completeYourAccount.addEventListener('click', () => {
     if (!email.value || email.value.length < 4) {
         alert('Invalid email');
@@ -18,6 +20,16 @@ completeYourAccount.addEventListener('click', () => {
             '*'
         );
     }
+});
+
+goBackToEnterTheCode.addEventListener('click', () => {
+    window.top.postMessage(
+        JSON.stringify({
+            closeCheckoutId: 'whats-your-email',
+            openCheckoutId: 'enter-the-code',
+        }),
+        '*'
+    );
 });
 
 closeBtn.addEventListener('click', () => {
