@@ -42,5 +42,14 @@ changePhone.addEventListener('click', () => {
 });
 
 code.addEventListener('keyup', () => {
-    console.log(code.value);
+    if (code.value.length > 6) {
+        window.top.postMessage(
+            JSON.stringify({
+                closeCheckoutId: 'enter-the-code',
+                openCheckoutId: 'whats-your-email',
+                code: code.value,
+            }),
+            '*'
+        );
+    }
 });
