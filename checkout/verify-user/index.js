@@ -4,7 +4,7 @@ const phone_number = document.getElementById('phone_number');
 
 enterTheCode.addEventListener('click', () => {
     if (!phone_number.value || phone_number.value.length < 11) {
-        console.log('invalid phone number');
+        alert('invalid phone number');
         return;
     } else {
         window.top.postMessage(
