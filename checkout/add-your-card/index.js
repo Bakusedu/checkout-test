@@ -1,5 +1,9 @@
 const closeBtn = document.getElementById('close-btn');
 
+var avatar = document.getElementById('avatar');
+
+var email = document.getElementById('email');
+
 closeBtn.addEventListener('click', () => {
     window.top.postMessage(
         JSON.stringify({
@@ -10,5 +14,7 @@ closeBtn.addEventListener('click', () => {
 });
 
 window.addEventListener('message', (event) => {
-    console.log(event);
+    const data = JSON.parse(event.data);
+    avatar.value = data.user.fname.charAt[0];
+    email.value = data.user.email;
 });
