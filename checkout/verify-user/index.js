@@ -2,7 +2,9 @@ const enterTheCode = document.getElementById('enter-the-code');
 
 const phone_number = document.getElementById('phone_number');
 
-enterTheCode.addEventListener('click', () => {
+enterTheCode.addEventListener('click', (event) => {
+    const data = JSON.parse(event.data);
+    console.log(data);
     window.top.postMessage(
         JSON.stringify({
             closeCheckoutId: 'verify-user',
@@ -15,7 +17,9 @@ enterTheCode.addEventListener('click', () => {
 
 const closeBtn = document.getElementById('close-btn');
 
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', (event) => {
+    const data = JSON.parse(event.data);
+    console.log(data);
     window.top.postMessage(
         JSON.stringify({
             closeCheckoutId: 'verify-user',
