@@ -15,7 +15,7 @@ closeBtn.addEventListener('click', () => {
 
 window.addEventListener('message', (event) => {
     const data = JSON.parse(event.data);
-    console.log(data.user);
+    console.log(data.user.fname.charAt[0]);
     avatar.value = data.user.fname.charAt[0];
     email.value = data.user.email;
 });
