@@ -1,4 +1,4 @@
-// var message = document.getElementById('success-otp-alert');
+var message = document.getElementById('success-otp-alert');
 window.addEventListener('message', (event) => {
     console.log(event);
     const data = JSON.parse(event.data);
