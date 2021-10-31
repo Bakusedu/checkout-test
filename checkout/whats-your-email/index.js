@@ -11,7 +11,7 @@ completeYourAccount.addEventListener('click', () => {
     } else {
         window.top.postMessage(
             JSON.stringify({
-                closeCheckoutId: 'enter-the-code',
+                closeCheckoutId: 'whats-your-email',
                 openCheckoutId: 'complete-your-account',
                 email: email.value,
             }),
