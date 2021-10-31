@@ -19,5 +19,5 @@ window.addEventListener('message', (event) => {
     const data = JSON.parse(event.data);
     avatar.innerHTML = data.user.fname.charAt(0);
     fullName.innerHTML = data.user.fname + ' ' + data.user.lname;
-    email.innerHTML = data.user.email;
+    email.innerHTML = data.email;
 });
