@@ -1,24 +1,34 @@
-// const completeYourAccount = document.getElementById('complete-your-account');
+const terms = document.getElementById('terms');
 
 const closeBtn = document.getElementById('close-btn');
 
-const goBackToWhatsYourEmail = document.getElementById('whats-your-email');
+const addYourCard = document.getElementById('add-your-card');
 
-// completeYourAccount.addEventListener('click', () => {
-//     if (!email.value || email.value.length < 4) {
-//         alert('Invalid email');
-//         return;
-//     } else {
-//         window.top.postMessage(
-//             JSON.stringify({
-//                 closeCheckoutId: 'whats-your-email',
-//                 openCheckoutId: 'complete-your-account',
-//                 email: email.value,
-//             }),
-//             '*'
-//         );
-//     }
-// });
+const fname = document.getElementById('fname');
+
+const lname = document.getElementById('lname');
+
+addYourCard.addEventListener('click', () => {
+    const userBio = {
+        fname: fname.value,
+        lname: lname.value,
+    };
+    if (terms.checked) {
+        if (!fname.value || !lname.value) {
+            console.log('Invalid first name or last name');
+            return;
+        } else {
+            window.top.postMessage(
+                JSON.stringify({
+                    closeCheckoutId: 'complete-your-account',
+                    openCheckoutId: 'add-your-card',
+                    userBio: userBio,
+                }),
+                '*'
+            );
+        }
+    }
+});
 
 goBackToWhatsYourEmail.addEventListener('click', () => {
     window.top.postMessage(
