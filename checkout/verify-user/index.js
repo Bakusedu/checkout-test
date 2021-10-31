@@ -23,3 +23,10 @@ closeBtn.addEventListener('click', () => {
         '*'
     );
 });
+
+window.addEventListener('message', (event) => {
+    const data = JSON.parse(event.data);
+    if (data.variable === 'phone_number') {
+        alert(data.phoneNumber);
+    }
+});
