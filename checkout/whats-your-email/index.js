@@ -1,5 +1,7 @@
 const completeYourAccount = document.getElementById('complete-your-account');
 
+const closeBtn = document.getElementById('close-btn');
+
 const email = document.getElementById('email');
 
 completeYourAccount.addEventListener('click', () => {
@@ -16,4 +18,13 @@ completeYourAccount.addEventListener('click', () => {
             '*'
         );
     }
+});
+
+closeBtn.addEventListener('click', () => {
+    window.top.postMessage(
+        JSON.stringify({
+            closeCheckoutId: 'verify-user',
+        }),
+        '*'
+    );
 });
