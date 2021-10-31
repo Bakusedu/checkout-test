@@ -8,3 +8,7 @@ closeBtn.addEventListener('click', () => {
         '*'
     );
 });
+
+window.addEventListener('message', (event) => {
+    console.log(event);
+});
