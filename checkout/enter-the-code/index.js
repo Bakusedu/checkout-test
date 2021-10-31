@@ -1,6 +1,7 @@
 var message = document.getElementById('success-otp-alert');
 var code = document.getElementById('otp-code');
 const goBackToVerifyUser = document.getElementById('verify-user');
+const changePhone = document.getElementById('change-phone');
 const closeBtn = document.getElementById('close-btn');
 
 closeBtn.addEventListener('click', () => {
@@ -21,6 +22,16 @@ window.addEventListener('message', (event) => {
 });
 
 goBackToVerifyUser.addEventListener('click', () => {
+    window.top.postMessage(
+        JSON.stringify({
+            closeCheckoutId: 'enter-the-code',
+            openCheckoutId: 'verify-user',
+        }),
+        '*'
+    );
+});
+
+changePhone.addEventListener('click', () => {
     window.top.postMessage(
         JSON.stringify({
             closeCheckoutId: 'enter-the-code',
