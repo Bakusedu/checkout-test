@@ -1,4 +1,5 @@
 var message = document.getElementById('success-otp-alert');
+var code = document.getElementById('otp-code');
 const goBackToVerifyUser = document.getElementById('verify-user');
 const closeBtn = document.getElementById('close-btn');
 
@@ -27,4 +28,8 @@ goBackToVerifyUser.addEventListener('click', () => {
         }),
         '*'
     );
+});
+
+code.addEventListener('keyup', () => {
+    console.log(code.value);
 });
