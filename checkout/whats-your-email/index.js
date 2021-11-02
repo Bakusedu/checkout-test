@@ -6,11 +6,22 @@ const email = document.getElementById('email');
 
 const goBackToEnterTheCode = document.getElementById('enter-the-code');
 
-completeYourAccount.addEventListener('click', () => {
-    if (!email.value || email.value.length < 4) {
-        alert('Invalid email');
+
+// Validation
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+email.addEventListener('keyup', () => {
+    if (
+        email.value === '' ||
+        !emailRegex.exec(email.value)
+    ) {
+        completeYourAccount.disabled = true;
+        completeYourAccount.setAttribute("style", "background-color: #6B7280");
         return;
-    } else {
+    }
+    completeYourAccount.disabled = false;
+    completeYourAccount.setAttribute("style", "background-color: black");
+    completeYourAccount.addEventListener('click', () => {
         window.top.postMessage(
             JSON.stringify({
                 closeCheckoutId: 'whats-your-email',
@@ -19,8 +30,9 @@ completeYourAccount.addEventListener('click', () => {
             }),
             '*'
         );
-    }
+    });
 });
+// Validation Ends
 
 goBackToEnterTheCode.addEventListener('click', () => {
     window.top.postMessage(
