@@ -65,21 +65,14 @@ function validate(inputs) {
                 fname: fname.value,
                 lname: lname.value,
             };
-            if (terms.checked) {
-                if (!fname.value || !lname.value) {
-                    console.log('Invalid first name or last name');
-                    return;
-                } else {
-                    window.top.postMessage(
-                        JSON.stringify({
-                            closeCheckoutId: 'complete-your-account',
-                            openCheckoutId: 'add-your-card',
-                            userBio: userBio,
-                        }),
-                        '*'
-                    );
-                }
-            }
+            window.top.postMessage(
+                JSON.stringify({
+                    closeCheckoutId: 'complete-your-account',
+                    openCheckoutId: 'add-your-card',
+                    userBio: userBio,
+                }),
+                '*'
+            );
         });
     };
 }
